@@ -1,0 +1,37 @@
+test_get_nb_char (__main__.TestExercice) ... ok
+test_get_nb_words (__main__.TestExercice) ... ERROR
+test_pair (__main__.TestExercice) ... ok
+test_remove_third_char (__main__.TestExercice) ... FAIL
+test_replace_char (__main__.TestExercice) ... ok
+
+======================================================================
+ERROR: test_get_nb_words (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 75, in test_get_nb_words
+    output = [exercice.get_nb_words(v[0], v[1]) for v in values]
+  File "test_exercice.py", line 75, in <listcomp>
+    output = [exercice.get_nb_words(v[0], v[1]) for v in values]
+TypeError: get_nb_words() takes 1 positional argument but 2 were given
+
+======================================================================
+FAIL: test_remove_third_char (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 33, in test_remove_third_char
+    'Retrait du mauvais caractère'
+AssertionError: Lists differ: ['he  jad!', 'ab defg', '01 34'] != ['he jad!', 'abdefg', '0134']
+
+First differing element 0:
+'he  jad!'
+'he jad!'
+
+- ['he  jad!', 'ab defg', '01 34']
+?     -           -          -
+
++ ['he jad!', 'abdefg', '0134'] : Retrait du mauvais caractère
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=1, errors=1)
